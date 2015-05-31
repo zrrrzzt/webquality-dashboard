@@ -61,7 +61,7 @@ var App = React.createClass({
             })}
           </tr>
           <tr>
-            <td className="explain">User experience mobile</td>
+            <td className="explain">UX mobile</td>
             {sites.map(function(site){
               return <ShowStatus data={self.state.data} filter="mobileUX" instance={site.id}></ShowStatus>;
             })}
