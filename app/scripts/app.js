@@ -16,7 +16,6 @@ var App = React.createClass({
     this.firebaseRef = new Firebase(fbUrl);
     this.firebaseRef.on("value", function(dataSnapshot) {
       var data = dataSnapshot.val();
-      console.log(data);
       this.setState({
         data: data
       });

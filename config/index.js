@@ -8,7 +8,7 @@ var config = {
   SITES: [
     {
       'id' : 'osl',
-      'name': 'Oslo kommune',
+      'name': 'Oslo',
       'url': 'https://www.oslo.kommune.no/'
     },
     {
@@ -18,7 +18,7 @@ var config = {
     },
     {
       'id' : 'pgr',
-      'name': 'Porsgrunn kommune',
+      'name': 'Porsgrunn',
       'url': 'https://www.porsgrunn.kommune.no/'
     }
   ],
