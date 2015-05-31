@@ -1,0 +1,27 @@
+{
+  "kode": {
+    "tfk": 1,
+    "bfv": 0,
+    "vfk": 0
+  },
+  "wcag": {
+    "tfk": 1,
+    "bfv": 0,
+    "vfk": 0
+  },
+  "mobileSpeed": {
+    "tfk": 0,
+    "bfv": 0,
+    "vfk": 0
+  },
+  "mobileUX": {
+    "tfk": 1,
+    "bfk": 1,
+    "vfk": 1
+  },
+  "desktopSpeed": {
+    "tfk": 1,
+    "bfk": 0,
+    "vfk": 0
+  }
+}
