@@ -31,12 +31,12 @@ function checkMobile(options, callback) {
       var usability = parseInt(result.ruleGroups.USABILITY.score, 10);
       console.log('Finished checking mobileSpeed for ' + options.id + ': ' + score);
       console.log('Finished checking mobileUX for ' + options.id + ': ' + usability);
-      if (score < 90) {
+      if (score < 85) {
         firebaseOptionsSpeed.value = -1;
       } else {
         firebaseOptionsSpeed.value = 1;
       }
-      if (usability < 90) {
+      if (usability < 85) {
         firebaseOptionsUsability.value = -1;
       } else {
         firebaseOptionsUsability.value = 1;

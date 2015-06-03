@@ -24,7 +24,7 @@ function checkDesktop(options, callback) {
       var result = JSON.parse(data);
       var score = parseInt(result.ruleGroups.SPEED.score, 10);
       console.log('Finished checking desktopSpeed for ' + options.id + ': ' + score);
-      if (score < 90) {
+      if (score < 85) {
         firebaseOptions.value = -1;
       } else {
         firebaseOptions.value = 1;
