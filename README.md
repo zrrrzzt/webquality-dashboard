@@ -92,6 +92,14 @@ $ npm run build
 
 After the build is finished you can serve the contents of the distfolder from a server of your own choice.
 
+## Collect data
+To run the tests and update Firebase just run the collector.
+
+```sh
+$ npm run collector
+```
+
+
 ## Development
 If you want to do some changes in the dashboard you can spin up a development server.
 
