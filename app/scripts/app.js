@@ -28,49 +28,30 @@ var App = React.createClass({
         <table>
           <thead>
           <tr>
-            <th className="explain">Factor</th>
-            {sites.map(function(site){
-              return <th className="explain">{site.name}</th>;
-            })}
+            <th className="explain">Site/Page</th>
+            <th className="explain">Valid html</th>
+            <th className="explain">Accessibilty</th>
+            <th className="explain">Speed desktop</th>
+            <th className="explain">Speed mobile</th>
+            <th className="explain">UX mobile</th>
+            <th className="explain">Score</th>
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td className="explain">Valid html</td>
+
             {sites.map(function(site){
-              return <ShowStatus data={self.state.data} filter="html" instance={site.id}></ShowStatus>;
+              return (
+                <tr>
+                <td className="explain">{site.name}</td>
+                <ShowStatus data={self.state.data} filter="html" instance={site.id}></ShowStatus>
+                <ShowStatus data={self.state.data} filter="wcag" instance={site.id}></ShowStatus>
+                <ShowStatus data={self.state.data} filter="desktopSpeed" instance={site.id}></ShowStatus>
+                <ShowStatus data={self.state.data} filter="mobileSpeed" instance={site.id}></ShowStatus>
+                <ShowStatus data={self.state.data} filter="mobileUX" instance={site.id}></ShowStatus>
+                <ShowScore data={self.state.data} instance={site.id}></ShowScore>
+                </tr>
+              );
             })}
-          </tr>
-          <tr>
-            <td className="explain">Accessibility</td>
-            {sites.map(function(site){
-              return <ShowStatus data={self.state.data} filter="wcag" instance={site.id}></ShowStatus>;
-            })}
-          </tr>
-          <tr>
-            <td className="explain">Speed desktop</td>
-            {sites.map(function(site){
-              return <ShowStatus data={self.state.data} filter="desktopSpeed" instance={site.id}></ShowStatus>;
-            })}
-          </tr>
-          <tr>
-            <td className="explain">Speed mobile</td>
-            {sites.map(function(site){
-              return <ShowStatus data={self.state.data} filter="mobileSpeed" instance={site.id}></ShowStatus>;
-            })}
-          </tr>
-          <tr>
-            <td className="explain">UX mobile</td>
-            {sites.map(function(site){
-              return <ShowStatus data={self.state.data} filter="mobileUX" instance={site.id}></ShowStatus>;
-            })}
-          </tr>
-          <tr>
-            <td className="explain">Total quality</td>
-            {sites.map(function(site){
-              return <ShowScore data={self.state.data} instance={site.id}></ShowScore>;
-            })}
-          </tr>
           </tbody>
         </table>
   </div>

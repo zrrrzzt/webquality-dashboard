@@ -181,6 +181,7 @@ gulp.task('serve', ['styles', 'browserify'], function () {
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['browserify', reload]);
   gulp.watch(['elements/**/*.js'], ['browserify', reload]);
+  gulp.watch(['config/**/*.js'], ['browserify', reload]);
   gulp.watch(['utils/**/*.js'], ['browserify', reload]);
   gulp.watch(['app/images/**/*'], reload);
 });

@@ -1,10 +1,10 @@
 'use strict';
 
 var config = {
-  FIREBASE_URL: 'your-firebase-url',
-  FIREBASE_DB: 'your-firebase-db',
-  ACHECKER_ID: 'your-achecker-api-key',
-  GOOGLE_API_KEY: 'your-google-api-key',
+  FIREBASE_URL: 'https://pythonia.firebaseio.com/',
+  FIREBASE_DB: 'webqualitydemo',
+  ACHECKER_ID: '32bab43d166df41d242aec90e6ec6c04d9eb241c',
+  GOOGLE_API_KEY: 'AIzaSyAu4oe2bKCeP4AnAyo78KL_XZvrS-WVIcw',
   SITES: [
     {
       'id' : 'osl',
