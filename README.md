@@ -14,11 +14,11 @@ Here are the limits to pass the test for the different areas.
 
 **wcag** - PASS or CONDITIONAL PASS the wcag 2 AA standard
 
-**mobile UX** - 90 or above
+**mobile UX** - 85 or above
 
-**mobile speed** - 90 or above
+**mobile speed** - 85 or above
 
-**desktop speed** - 90 or above
+**desktop speed** - 85 or above
 
 ## Prerequisites
 You will need to have Node.js/IO.js and npm installed.
