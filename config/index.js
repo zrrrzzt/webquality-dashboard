@@ -1,10 +1,22 @@
 'use strict';
 
+var FIREBASE_URL = 'your-firebase-url';
+var FIREBASE_DB = 'your-firebase-db';
+var ACHECKER_ID = 'your-achecker-api-key';
+var GOOGLE_API_KEY = 'your-google-api-key';
+
 var config = {
-  FIREBASE_URL: 'your-firebase-url',
-  FIREBASE_DB: 'your-firebase-db',
-  ACHECKER_ID: 'your-achecker-api-key',
-  GOOGLE_API_KEY: 'your-google-api-key',
+  FIREBASE_URL: FIREBASE_URL,
+  FIREBASE_DB: FIREBASE_DB,
+  ACHECKER_ID: ACHECKER_ID,
+  GOOGLE_API_KEY: GOOGLE_API_KEY,
+  SERVICE_URLS: {
+    'html':'http://validator.w3.org/nu/?useragent=Validator.nu/LV http://validator.w3.org/services&doc=',
+    'wcag': 'http://achecker.ca/checkacc.php?id=' + ACHECKER_ID + '&uri=',
+    'desktopSpeed':'https://developers.google.com/speed/pagespeed/insights/?url=',
+    'mobileSpeed':'https://developers.google.com/speed/pagespeed/insights/?url=',
+    'mobileUX':'https://developers.google.com/speed/pagespeed/insights/?url='
+  },
   SITES: [
     {
       'id' : 'ake',

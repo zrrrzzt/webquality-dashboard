@@ -43,11 +43,11 @@ var App = React.createClass({
               return (
                 <tr>
                 <td className="explain">{site.name}</td>
-                <ShowStatus data={self.state.data} filter="html" instance={site.id}></ShowStatus>
-                <ShowStatus data={self.state.data} filter="wcag" instance={site.id}></ShowStatus>
-                <ShowStatus data={self.state.data} filter="desktopSpeed" instance={site.id}></ShowStatus>
-                <ShowStatus data={self.state.data} filter="mobileSpeed" instance={site.id}></ShowStatus>
-                <ShowStatus data={self.state.data} filter="mobileUX" instance={site.id}></ShowStatus>
+                <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="html" instance={site.id} url={site.url}></ShowStatus>
+                <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="wcag" instance={site.id} url={site.url}></ShowStatus>
+                <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="desktopSpeed" instance={site.id} url={site.url}></ShowStatus>
+                <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="mobileSpeed" instance={site.id} url={site.url}></ShowStatus>
+                <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="mobileUX" instance={site.id} url={site.url}></ShowStatus>
                 <ShowScore data={self.state.data} instance={site.id}></ShowScore>
                 </tr>
               );

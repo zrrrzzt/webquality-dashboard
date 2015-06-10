@@ -1,7 +1,7 @@
 {
   "name": "webquality-dashboard",
   "description": "Realtime dashboard for your websites quality",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
