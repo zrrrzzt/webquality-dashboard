@@ -42,7 +42,7 @@ var App = React.createClass({
             {sites.map(function(site){
               return (
                 <tr>
-                <td className="explain">{site.name}</td>
+                <td className="explain"><a href={site.url} target="_blank">{site.name}</a></td>
                 <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="html" instance={site.id} url={site.url}></ShowStatus>
                 <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="wcag" instance={site.id} url={site.url}></ShowStatus>
                 <ShowStatus data={self.state.data} services={config.SERVICE_URLS} filter="desktopSpeed" instance={site.id} url={site.url}></ShowStatus>

@@ -7,21 +7,20 @@ var checkMobile = require('./checkMobile');
 var checkHtml = require('./checkHtml');
 var config = require('../config');
 var sites = config.SITES;
-var jobsTotal = sites.length * 4;
+var jobsTotal = 4;
 var jobsDone = 0;
-var pauseTime = 0;
+var pauseTime = 1000;
 
 function areWeDoneYet() {
   jobsDone ++;
   if (jobsDone === jobsTotal) {
-    console.log('Finished! kthxbye...');
-    process.exit(0);
+    next();
   }
 }
 
-sites.forEach(function(site) {
-  pauseTime += 1000;
-  setTimeout(function() {
+function checkSite() {
+  setTimeout(function delayMe() {
+    var site = sites.pop();
     checkWcag(site, function(error, message) {
       if (error) {
         console.error(error);
@@ -55,4 +54,20 @@ sites.forEach(function(site) {
       areWeDoneYet();
     });
   }, pauseTime);
-});
+}
+
+function weAreFinished() {
+  console.log('Finished! kthxbye...');
+  process.exit(0);
+}
+
+function next() {
+  if(sites.length > 0) {
+    jobsDone = 0;
+    checkSite();
+  } else {
+    weAreFinished();
+  }
+}
+
+next();
