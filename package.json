@@ -1,7 +1,7 @@
 {
   "name": "webquality-dashboard",
   "description": "Realtime dashboard for your websites quality",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
@@ -71,7 +71,7 @@
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
-    "gpagespeed": "^3.0.0",
+    "gpagespeed": "^1.0.0",
     "html-validator": "0.0.8",
     "wcag": "^0.1.12"
   }
