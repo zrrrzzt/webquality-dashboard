@@ -73,7 +73,6 @@
   "dependencies": {
     "gpagespeed": "^1.0.0",
     "html-validator": "0.0.8",
-    "wait": "^0.1.0",
     "wcag": "^0.1.6"
   }
 }

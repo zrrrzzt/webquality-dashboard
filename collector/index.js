@@ -1,6 +1,5 @@
 'use strict';
 
-var wait = require('wait');
 var checkWcag = require('./checkWcag');
 var checkDesktop = require('./checkDesktop');
 var checkMobile = require('./checkMobile');
