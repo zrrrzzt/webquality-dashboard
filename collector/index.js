@@ -8,7 +8,7 @@ var config = require('../config');
 var sites = config.SITES;
 var jobsTotal = 4;
 var jobsDone = 0;
-var pauseTime = 1000;
+var pauseTime = 1500;
 
 function areWeDoneYet() {
   jobsDone ++;
@@ -17,41 +17,22 @@ function areWeDoneYet() {
   }
 }
 
+function handleResponse(error, message) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(message);
+  }
+  areWeDoneYet();
+}
+
 function checkSite() {
   setTimeout(function delayMe() {
     var site = sites.pop();
-    checkWcag(site, function(error, message) {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log(message);
-      }
-      areWeDoneYet();
-    });
-    checkDesktop(site, function(error, message) {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log(message);
-      }
-      areWeDoneYet();
-    });
-    checkMobile(site, function(error, message) {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log(message);
-      }
-      areWeDoneYet();
-    });
-    checkHtml(site, function(error, message) {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log(message);
-      }
-      areWeDoneYet();
-    });
+    checkWcag(site, handleResponse);
+    checkDesktop(site, handleResponse);
+    checkMobile(site, handleResponse);
+    checkHtml(site, handleResponse);
   }, pauseTime);
 }
 
