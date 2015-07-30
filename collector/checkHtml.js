@@ -24,6 +24,7 @@ function checkHtml(options, callback) {
     category: 'html',
     id: options.id
   };
+  console.log('Running html check of ' + options.id);
   validator(validatorOptions, function(error, data){
     if (error) {
       return callback(error, null);
@@ -43,7 +44,7 @@ function checkHtml(options, callback) {
         }
       })
     }
-  })
+  });
 }
 
 module.exports = checkHtml;

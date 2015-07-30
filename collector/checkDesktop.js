@@ -17,6 +17,7 @@ function checkDesktop(options, callback) {
     category: 'desktopSpeed',
     id: options.id
   };
+  console.log('Running desktopSpeed check of ' + options.id);
   gps(gpsOptions, function(error, data) {
     if (error) {
       return callback(error, null);
@@ -38,7 +39,6 @@ function checkDesktop(options, callback) {
       })
     }
   });
-  console.log('Running desktopSpeed check of ' + options.id);
 }
 
 module.exports = checkDesktop;

@@ -22,6 +22,8 @@ function checkMobile(options, callback) {
     category: 'mobileUX',
     id: options.id
   };
+  console.log('Running mobileSpeed check of ' + options.id);
+  console.log('Running mobileUX check of ' + options.id);
   gps(gpsOptions, function(error, data) {
     if (error) {
       return callback(error, null);
@@ -57,7 +59,6 @@ function checkMobile(options, callback) {
       })
     }
   });
-  console.log('Running desktopSpeed check of ' + options.id);
 }
 
 module.exports = checkMobile;
