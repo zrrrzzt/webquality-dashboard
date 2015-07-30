@@ -8,20 +8,16 @@ var config = require('../config');
 var sites = config.SITES;
 
 function checkSite(site) {
-  var jobs = [
-    checkMobile,
-    checkWcag,
-    checkHtml,
-    checkDesktop
-  ];
+  var jobsTodo = 4;
+  var jobsDone = 0;
+
   function areWeDoneYet() {
-    if (jobs.length > 0) {
-      var job = jobs.pop();
-      job(site, handleResponse);
-    } else {
-      next();
+    jobsDone++;
+    if (jobsDone === jobsTodo) {
+      next()
     }
   }
+
   function handleResponse(error, message) {
     if (error) {
       console.error(error);
@@ -30,7 +26,12 @@ function checkSite(site) {
     }
     areWeDoneYet();
   }
-  areWeDoneYet();
+
+  checkWcag(site, handleResponse);
+  checkMobile(site, handleResponse);
+  checkHtml(site, handleResponse);
+  checkDesktop(site, handleResponse);
+
 }
 
 function weAreFinished() {
