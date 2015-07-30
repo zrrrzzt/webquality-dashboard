@@ -56,7 +56,7 @@ var config = {
     {
       'id' : 'mrf',
       'name': 'Møre og Romsdal',
-      'url': 'https://mrfylke.no/'
+      'url': 'https://www.mrfylke.no/'
     },
     {
       'id' : 'nordl',
