@@ -41,7 +41,7 @@
     "del": "^2.2.2",
     "firebase": "^4.0.0",
     "gulp": "^3.8.5",
-    "gulp-autoprefixer": "^3.1.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-cache": "0.4.6",
     "gulp-changed": "^3.1.0",
     "gulp-csso": "^3.0.0",
