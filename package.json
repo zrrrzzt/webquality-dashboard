@@ -57,7 +57,7 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.0",
-    "gulp-useref": "^3.1.2",
+    "gulp-useref": "^3.1.4",
     "jshint-stylish": "^2.2.1",
     "mocha": "^4.0.1",
     "opn": "^5.0.0",
