@@ -39,7 +39,7 @@
     "browser-sync": "2.24.4",
     "browserify": "16.2.2",
     "del": "3.0.0",
-    "firebase": "4.13.1",
+    "firebase": "5.2.0",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "5.0.0",
     "gulp-cache": "1.0.2",
