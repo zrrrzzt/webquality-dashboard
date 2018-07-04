@@ -71,7 +71,7 @@
     "vinyl-transform": "1.0.0"
   },
   "dependencies": {
-    "gpagespeed": "4.0.5",
+    "gpagespeed": "5.0.1",
     "html-validator": "3.0.5",
     "wcag": "0.3.0"
   }
